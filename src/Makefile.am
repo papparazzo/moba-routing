@@ -1,14 +1,11 @@
 AUTOMAKE_OPTIONS = subdir-objects
 bin_PROGRAMS = \
-    moba-blocksystem
+    moba-routing
 
-moba_blocksystem_SOURCES = \
-    layoutparser.cpp \
-    main.cpp \
-    msgloop.cpp \
-    screen.cpp
+moba_routing_SOURCES = \
+    main.cpp 
 
-moba_blocksystem_LDADD = \
+moba_routing_LDADD = \
     -lmobacommon -lncurses $(GTKMM_LIBS) \
     $(srcdir)/../modules/lib-msghandling/src/moba/libmsghandling.a \
     $(srcdir)/../modules/lib-tracklayout/src/moba/libtracklayout.a
@@ -19,6 +16,6 @@ AM_CPPFLAGS = \
     $(GTKMM_CFLAGS) \
     -I$(srcdir)/../modules/lib-msghandling/src \
     -I$(srcdir)/../modules/lib-tracklayout/src \
-    -g3 -g -ggdb  -Wall
+    -g3 -g -ggdb  -Wall -Wno-deprecated-declarations
 
 CLEANFILES = *~
