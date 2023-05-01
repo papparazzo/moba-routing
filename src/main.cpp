@@ -30,7 +30,7 @@
 #include "moba/socket.h"
 #include "moba/endpoint.h"
 #include "moba/layoutmessages.h"
-//#include "msgloop.h"
+#include "msgloop.h"
 
 #include <unistd.h>
 
@@ -49,6 +49,6 @@ int main(int argc, char *argv[]) {
     auto socket = std::make_shared<Socket>(appData.host, appData.port);
     auto endpoint = EndpointPtr{new Endpoint{socket, appData.appName, appData.version, {Message::CLIENT, Message::LAYOUT, Message::INTERFACE}}};
 
-  //  MessageLoop loop(endpoint);
-  //  loop.run();
+    MessageLoop loop(endpoint);
+    loop.run();
 }
