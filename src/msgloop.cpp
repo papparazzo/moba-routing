@@ -30,7 +30,6 @@ MessageLoop::MessageLoop(EndpointPtr endpoint): endpoint{endpoint}, closing{fals
 }
 
 void MessageLoop::run() {
-/*
     while(!closing) {
         try {
             Registry registry;
@@ -55,7 +54,6 @@ void MessageLoop::run() {
         }
         std::this_thread::sleep_for(std::chrono::milliseconds{500});
     }
- */ 
 }
 /*
 void MessageLoop::getFeedbackContactList(const ControlGetBlockListRes &d) {

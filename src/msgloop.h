@@ -27,12 +27,12 @@
 #include "moba/interfacemessages.h"
 #include "moba/endpoint.h"
 #include "moba/train.h"
-//#include "common.h"
+#include "common.h"
 
 class MessageLoop {
 
     EndpointPtr endpoint;
-/*
+
     // in
     BlockContactDataMapPtr blockContacts;
     SwitchStandMapPtr switchstates;
@@ -41,9 +41,9 @@ class MessageLoop {
     // out
     BlockNodeMapPtr blockMap;
     SwitchNodeMapPtr switchMap;
-*/
+
     bool closing;
-/*    Screen screen;
+//    Screen screen;
     
     void parseLayout(const LayoutGetLayoutsRes_Derived &d);
     void contactTriggered(const InterfaceContactTriggered &d);
@@ -51,8 +51,7 @@ class MessageLoop {
     void getSwitchStates(const ControlGetSwitchStandListRes &d);
     void getTrainList(const ControlGetTrainListRes &d);
 
-    void updateScreen();
-* */    
+    void updateScreen(); 
 
 public:
     MessageLoop(EndpointPtr endpoint);
