@@ -22,10 +22,11 @@ set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 target_include_directories(moba-routing PUBLIC "${PROJECT_BINARY_DIR}")
 
 target_link_libraries(moba-routing mobacommon)
-
 target_link_libraries(moba-routing ${CMAKE_SOURCE_DIR}/modules/lib-msghandling/src/moba/libmsghandling.a)
+target_link_libraries(moba-routing ${CMAKE_SOURCE_DIR}/modules/lib-tracklayout/src/moba/libtraclayout.a)
 
 include_directories(${CMAKE_SOURCE_DIR}/modules/lib-msghandling/src)
+include_directories(${CMAKE_SOURCE_DIR}/modules/lib-tracklayout/src)
 
 #AM_CPPFLAGS = \
 #    $(GTKMM_CFLAGS) \
