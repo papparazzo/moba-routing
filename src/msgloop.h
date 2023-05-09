@@ -22,7 +22,7 @@
 
 #include <memory>
 
-//#include "derivedmessages.h"
+#include "derivedmessages.h"
 //#include "screen.h"
 #include "moba/interfacemessages.h"
 #include "moba/endpoint.h"
@@ -43,7 +43,6 @@ class MessageLoop {
     SwitchNodeMapPtr switchMap;
 
     bool closing;
-//    Screen screen;
     
     void parseLayout(const LayoutGetLayoutsRes_Derived &d);
     void contactTriggered(const InterfaceContactTriggered &d);

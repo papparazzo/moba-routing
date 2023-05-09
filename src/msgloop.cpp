@@ -24,7 +24,7 @@
 #include "msgloop.h"
 #include "moba/registry.h"
 #include "moba/controlmessages.h"
-//#include "layoutparser.h"
+#include "layoutparser.h"
 
 MessageLoop::MessageLoop(EndpointPtr endpoint): endpoint{endpoint}, closing{false} {
 }
