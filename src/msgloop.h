@@ -43,7 +43,7 @@ class MessageLoop {
     SwitchNodeMapPtr switchMap;
 
     bool closing;
-    
+    /*
     void parseLayout(const LayoutGetLayoutsRes_Derived &d);
     void contactTriggered(const InterfaceContactTriggered &d);
     void getFeedbackContactList(const ControlGetBlockListRes &d);
@@ -51,6 +51,7 @@ class MessageLoop {
     void getTrainList(const ControlGetTrainListRes &d);
 
     void updateScreen(); 
+    */
 
 public:
     MessageLoop(EndpointPtr endpoint);
