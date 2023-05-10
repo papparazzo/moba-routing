@@ -33,11 +33,11 @@ void MessageLoop::run() {
     while(!closing) {
         try {
             Registry registry;
-            registry.registerHandler<LayoutGetLayoutsRes_Derived>([this](const LayoutGetLayoutsRes_Derived &d) {parseLayout(d);});
-            registry.registerHandler<InterfaceContactTriggered>([this](const InterfaceContactTriggered &d) {contactTriggered(d);});
-            registry.registerHandler<ControlGetBlockListRes>([this](const ControlGetBlockListRes &d) {getFeedbackContactList(d);});
-            registry.registerHandler<ControlGetSwitchStandListRes>([this](const ControlGetSwitchStandListRes &d) {getSwitchStates(d);});
-            registry.registerHandler<ControlGetTrainListRes>([this](const ControlGetTrainListRes &d) {getTrainList(d);});
+          //  registry.registerHandler<LayoutGetLayoutsRes_Derived>([this](const LayoutGetLayoutsRes_Derived &d) {parseLayout(d);});
+          //  registry.registerHandler<InterfaceContactTriggered>([this](const InterfaceContactTriggered &d) {contactTriggered(d);});
+          //  registry.registerHandler<ControlGetBlockListRes>([this](const ControlGetBlockListRes &d) {getFeedbackContactList(d);});
+          //  registry.registerHandler<ControlGetSwitchStandListRes>([this](const ControlGetSwitchStandListRes &d) {getSwitchStates(d);});
+          //  registry.registerHandler<ControlGetTrainListRes>([this](const ControlGetTrainListRes &d) {getTrainList(d);});
 
             //registry.registerHandler<ControlBlockLocked>([this](const ControlBlockLocked &d) {});
             //registry.registerHandler<ControlBlockLockingFailed>([this](const ControlBlockLockingFailed &d) {});
@@ -50,7 +50,7 @@ void MessageLoop::run() {
                 registry.handleMsg(endpoint->waitForNewMsg());
             }
         } catch(const std::exception &e) {
-            screen.printException(e.what());
+          //  screen.printException(e.what());
         }
         std::this_thread::sleep_for(std::chrono::milliseconds{500});
     }
