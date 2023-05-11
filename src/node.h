@@ -25,6 +25,7 @@
 #include "moba/direction.h"
 #include "nodeexception.h"
 
+// FIXME: Auslagern...
 #include "moba/enumswitchstand.h"
 
 struct Node;
