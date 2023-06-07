@@ -47,5 +47,5 @@ using BlockContactDataMapPtr = std::shared_ptr<std::map<Position, BlockContactDa
 using SwitchStandMapPtr = std::shared_ptr<std::map<Position, SwitchStandData>>;
 
 // Out
-using SwitchNodeMapPtr = std::shared_ptr<std::map<int, NodePtr>>;
-using BlockNodeMapPtr = std::shared_ptr<std::map<ContactData, BlockPtr>>;
+//using SwitchNodeMapPtr = std::shared_ptr<std::map<int, NodePtr>>;
+//using BlockNodeMapPtr = std::shared_ptr<std::map<ContactData, BlockPtr>>;

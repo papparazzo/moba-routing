@@ -39,8 +39,8 @@ class MessageLoop {
     TrainListPtr trainList;
 
     // out
-    BlockNodeMapPtr blockMap;
-    SwitchNodeMapPtr switchMap;
+   // BlockNodeMapPtr blockMap;
+   // SwitchNodeMapPtr switchMap;
 
     bool closing;
     /*
