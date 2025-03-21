@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.25)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
 
 project(moba-routing VERSION 0.1.0)
-
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 configure_file(config.h.in config.h)
 
@@ -17,13 +18,11 @@ add_executable(
 
 install(TARGETS moba-routing)
 
-set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
-
 target_include_directories(moba-routing PUBLIC "${PROJECT_BINARY_DIR}")
 
 target_link_libraries(moba-routing mobacommon)
-target_link_libraries(moba-routing ${CMAKE_SOURCE_DIR}/modules/lib-msghandling/src/moba/libmsghandling.a)
-target_link_libraries(moba-routing ${CMAKE_SOURCE_DIR}/modules/lib-tracklayout/src/moba/libtracklayout.a)
+target_link_libraries(moba-routing ${CMAKE_SOURCE_DIR}/modules/lib-msghandling/libmoba-lib-msghandling.a)
+target_link_libraries(moba-routing ${CMAKE_SOURCE_DIR}/modules/lib-tracklayout/libmoba-lib-tracklayout.a)
 
 include_directories(${CMAKE_SOURCE_DIR}/modules/lib-msghandling/src)
 include_directories(${CMAKE_SOURCE_DIR}/modules/lib-tracklayout/src)
